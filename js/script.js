@@ -13,8 +13,9 @@ app = new Vue(
                 console.log(email);
                 this.list.push(email)
                 })}
-            }
+            },
         }
+        
         
     
 );
