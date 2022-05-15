@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Email list</title>
     
     <script
@@ -17,10 +18,25 @@
     
 </head>
 <body>
+    
     <div id="root">
-        <ul v-if="list.length >= 10">
-            <li v-for="email in list">{{ email }}</li>
-        </ul>
+        <!--header-->
+        <header>    
+            <div>
+                <h1 id="title">Genera 10 email casuali e scegli la migliore per te!</h1>
+                <div class="btn" @click="generateEmail">Clicca qui per generare</div>
+            </div>
+        </header>
+        <!-- / header-->
+
+        <!--Email List-->
+        <div class="emailList">
+            <ul v-if="list.length >= 10">
+                <li v-for="email in list">{{ email }}</li>
+            </ul>
+        </div>
+        <!-- /Email List-->
+        
     </div>
 
     
